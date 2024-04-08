@@ -21,14 +21,16 @@ int main(int argc, char** argv)
 		print(&resglob);
 	}else
 	{
-		while((c = getopt(argc, argv, "-l")) != -1)
+		while((c = getopt(argc, argv, "-ln")) != -1)
 		{
 			switch(c)
 			{
 				case 'l':
 					ls_l();					
 					break;
-
+				case 'n':
+					ls_n();
+					break;
 			}
 
 
