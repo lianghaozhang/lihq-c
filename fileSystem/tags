@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS= -o$/;"	m
+MAXSIZE	du.c	9;"	d	file:
+SRC	Makefile	/^SRC=ls.c ls_f.c$/;"	m
+TARGET	Makefile	/^TARGET=ls$/;"	m
+TIMESIZE	getopt.c	7;"	d	file:
+__LS_F_H_	ls_f.h	2;"	d
+f	du.c	/^static int f(const char* pathname)$/;"	f	file:
+ls	ls_f.c	/^void ls(glob_t* resglob)$/;"	f
+ls_l	ls_f.c	/^void ls_l()$/;"	f
+main	du.c	/^int main(int argc, char** argv)$/;"	f
+main	getopt.c	/^int main(int argc, char** argv)$/;"	f
+main	ls.c	/^int main(int argc, char** argv)$/;"	f
+mydu	du.c	/^static int mydu(const char* path)$/;"	f	file:
+print	ls_f.c	/^void print(glob_t* glob)$/;"	f
+splitPath	ls_f.c	/^void splitPath(char* path)$/;"	f

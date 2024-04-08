@@ -1,0 +1,101 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFSIZE	io/cp_fread.c	9;"	d	file:
+CC	fileSystem/Makefile	/^CC=gcc$/;"	m
+CC	io/Makefile	/^CC=gcc$/;"	m
+CC	myls/Makefile	/^CC=gcc$/;"	m
+CC	string/Makefile	/^CC=gcc$/;"	m
+CC	time/Makefile	/^CC=gcc$/;"	m
+CFLAGS	fileSystem/Makefile	/^CFLAGS= -o$/;"	m
+CFLAGS	io/Makefile	/^CFLAGS=-o$/;"	m
+CFLAGS	myls/Makefile	/^CFLAGS=-o$/;"	m
+CFLAGS	string/Makefile	/^CFLAGS=-o$/;"	m
+CFLAGS	time/Makefile	/^CFLAGS=-o$/;"	m
+LEFT	fork/fork.c	4;"	d	file:
+M	day04/change.c	5;"	d	file:
+MAX	day02/define.c	3;"	d	file:
+MAXLEN	day04/scanf.c	3;"	d	file:
+MAXLEN	day05/strncat.c	4;"	d	file:
+MAXSIZE	fileSystem/du.c	9;"	d	file:
+N	day04/change.c	6;"	d	file:
+PASSWORD	day05/strcmp.c	4;"	d	file:
+RIGTH	fork/fork.c	5;"	d	file:
+SIZE	myls/myls.c	7;"	d	file:
+SRC	fileSystem/Makefile	/^SRC=ls.c ls_f.c$/;"	m
+STRINGLEN	string/strcpyANDstrncpy.c	5;"	d	file:
+STRLEN	day05/strncpy.c	4;"	d	file:
+Student	io/student.h	/^} Student;$/;"	t	typeref:struct:__anon1
+TARGET	fileSystem/Makefile	/^TARGET=ls$/;"	m
+TIMESIZE	fileSystem/getopt.c	7;"	d	file:
+TIMESIZE	time/time.c	5;"	d	file:
+__LS_F_H_	fileSystem/ls_f.h	2;"	d
+__PROJECT_H__	day02/static/project.h	2;"	d
+__STUDENT_H_	io/student.h	2;"	d
+add	io/demo.c	/^int add(const Student* s)$/;"	f
+age	io/student.h	/^    int age;$/;"	m	struct:__anon1
+call_f	day02/static/project.c	/^void call_f(void)$/;"	f
+count	io/demo.c	/^static count = 0;$/;"	v	file:
+f	day01/a.c	/^int f(int n){$/;"	f
+f	day01/a.s	/^f:$/;"	l
+f	day02/static/project.c	/^static void f(void)$/;"	f	file:
+f	day04/demo01.c	/^void f(int val, int start, int end)$/;"	f
+f	day06/void*.c	/^void f(void* v)$/;"	f
+f	fileSystem/du.c	/^static int f(const char* pathname)$/;"	f	file:
+f	string/mystrcpy.c	/^char* f(char* dest, const char* src)$/;"	f
+i	day02/static/main.c	/^int i = 999;$/;"	v
+i	day02/static/project.c	/^static int i = 111;$/;"	v	file:
+initStudentList	io/demo.c	/^void initStudentList(void)$/;"	f
+list	io/demo.c	/^static Student list[50];$/;"	v	file:
+ls	fileSystem/ls_f.c	/^void ls(glob_t* resglob)$/;"	f
+ls_l	fileSystem/ls_f.c	/^void ls_l()$/;"	f
+main	day01/aaa.c	/^int main(){$/;"	f
+main	day01/aaa.s	/^main:$/;"	l
+main	day01/b.c	/^int main(void){$/;"	f
+main	day01/b.s	/^main:$/;"	l
+main	day02/define.c	/^int main(void){$/;"	f
+main	day02/define.s	/^main:$/;"	l
+main	day02/static/main.c	/^int main(void)$/;"	f
+main	day04/change.c	/^int main(void)$/;"	f
+main	day04/demo01.c	/^int main(void)$/;"	f
+main	day04/demo02.c	/^int main(void)$/;"	f
+main	day04/jiujiuchengfabiao.c	/^int main(void)$/;"	f
+main	day04/scanf.c	/^int main(void)$/;"	f
+main	day04/shuchu.c	/^int main(void)$/;"	f
+main	day04/shuixianhuashu.c	/^int main(void)$/;"	f
+main	day04/xunhuanshuru.c	/^int main(void)$/;"	f
+main	day04/zhishu.c	/^int main(void)$/;"	f
+main	day05/strcmp.c	/^int main(void)$/;"	f
+main	day05/strncat.c	/^int main(void)$/;"	f
+main	day05/strncpy.c	/^int main(void)$/;"	f
+main	day06/point.c	/^int main(void)$/;"	f
+main	day06/void*.c	/^int main(void)$/;"	f
+main	fileSystem/du.c	/^int main(int argc, char** argv)$/;"	f
+main	fileSystem/getopt.c	/^int main(int argc, char** argv)$/;"	f
+main	fileSystem/ls.c	/^int main(int argc, char** argv)$/;"	f
+main	fork/execl.c	/^int main(void)$/;"	f
+main	fork/fork.c	/^int main(void)$/;"	f
+main	fork/hello.c	/^int main(void)$/;"	f
+main	io/cp.c	/^int main(int argc, char* argv[])$/;"	f
+main	io/cp_fread.c	/^int main(int argc, char* argv[])$/;"	f
+main	io/demo.c	/^int main(void)$/;"	f
+main	io/sprintf.c	/^int main(void)$/;"	f
+main	myls/myls.c	/^int main(int argc, char** argv)$/;"	f
+main	string/mystrcpy.c	/^int main(void)$/;"	f
+main	string/play.c	/^int main(int argc, char** argv)$/;"	f
+main	string/strcmpANDstrncmp.c	/^int main(void)$/;"	f
+main	string/strcpyANDstrncpy.c	/^int main(void)$/;"	f
+main	time/time.c	/^int main(void)$/;"	f
+mydu	fileSystem/du.c	/^static int mydu(const char* path)$/;"	f	file:
+name	io/student.h	/^    char name[10];$/;"	m	struct:__anon1
+print	fileSystem/ls_f.c	/^void print(glob_t* glob)$/;"	f
+printarr	day05/strncpy.c	/^static void printarr(char arr[], int len)$/;"	f	file:
+r	io/demo.c	/^void r(void)$/;"	f
+show	myls/myls.c	/^static void show(glob_t* glob)$/;"	f	file:
+showList	io/demo.c	/^void showList(void)$/;"	f
+sno	io/student.h	/^    char sno[30];$/;"	m	struct:__anon1
+splitPath	fileSystem/ls_f.c	/^void splitPath(char* path)$/;"	f
+w	io/demo.c	/^void w(void)$/;"	f
