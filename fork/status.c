@@ -6,7 +6,6 @@
 
 int main(void)
 {
-	puts("START!");
 	pid_t pid;
 	pid = fork();
 	if(pid < 0)
@@ -17,14 +16,14 @@ int main(void)
 
 	if(pid == 0)
 	{
-		fprintf(stdout, "[%d]:this is child working...\n", getpid());
+		fprintf(stdout, "[%d]:child is working...\n", getpid());
+		sleep(1000);
+
 	}
 	else
 	{
-		fprintf(stdout, "[%d]:this is parent working...\n", getpid());
+		fprintf(stdout, "[%d]:parent is working...\n", getpid());
 	}
-
-	puts("END!");
 
 	exit(0);
 }

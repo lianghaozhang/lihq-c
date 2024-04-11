@@ -1,5 +1,5 @@
-fork: fork.c
-	gcc fork.c -o fork
+CC=gcc
+CFLAGS=-o
 
-clean:
-	rm -rf fork
+%: %.c
+	$(CC) $^ $(CFLAGS) $@

@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-
+#include <sys/wait.h>
 
 int main(void)
 {
-	puts("START!");
+	fprintf(stdout, "START!\n");
 	pid_t pid;
 	pid = fork();
 	if(pid < 0)
@@ -17,14 +17,12 @@ int main(void)
 
 	if(pid == 0)
 	{
-		fprintf(stdout, "[%d]:this is child working...\n", getpid());
-	}
-	else
-	{
-		fprintf(stdout, "[%d]:this is parent working...\n", getpid());
+		execl("tar", "1", "2", "3", "4", "5", NULL);
+		perror("execl()");
 	}
 
-	puts("END!");
+	wait(NULL);
 
+	fprintf(stdout, "END!\n");
 	exit(0);
 }

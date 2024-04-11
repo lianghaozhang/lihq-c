@@ -87,7 +87,8 @@ void fileInfo(const char* path)
 	info[10] = '\0';
 
 	char timefm[1024];
-	strftime(timefm, 1024, "%-m月%-d %H:%M", localtime(&statres.st_mtime));
+	//strftime(timefm, 1024, "%-m %-d %H:%M", localtime(&statres.st_mtime));
+	strftime(timefm, 1024, "%-m %-d %H:%M", localtime(&statres.st_mtime));
 	fprintf(stdout, "%s %ld %s %s %5ld  %s  ", info, hardLink, user, group, statres.st_size, timefm);
 }
 
@@ -118,8 +119,8 @@ void fileInfo_n(const char* path)
 	info[10] = '\0';
 
 	char timefm[1024];
-	strftime(timefm, 1024, "%-m月%-d %H:%M", localtime(&statres.st_mtime));
-	fprintf(stdout, "%s %ld %ld %ld %5ld  %s  ", info, hardLink, uid, gid, statres.st_size, timefm);
+	strftime(timefm, 1024, "%-m %-d %H:%M", localtime(&statres.st_mtime));
+	fprintf(stdout, "%s %ld %d %d %5ld  %s  ", info, hardLink, uid, gid, statres.st_size, timefm);
 }
 
 
