@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <signal.h>
 
-#define BUFSIZE	20
+#define BUFSIZE	10
 
 static void alrm_handler(int);
 
@@ -37,12 +37,8 @@ int main(int argc, char** argv)
 		alarm(1);
 		pause();
 	}
-	close(fd);
-
 	exit(0);
 }
 
 
-static void alrm_handler(int i)
-{
-}	
+static void alrm_handler(int i){}

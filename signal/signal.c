@@ -10,6 +10,7 @@ int main(void)
 {
 	int i;
 	signal(SIGINT, f);
+	//signal(SIGINT, SIG_IGN);
 	for(i = 0; i < 10; i++)
 	{
 		fprintf(stdout, "*");
