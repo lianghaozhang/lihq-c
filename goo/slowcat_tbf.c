@@ -10,8 +10,7 @@
 #define BURST	1000
 #define BUFSIZE	CPS
 
-static volatile int loop = 1;
-static int token = 0;
+static volatile sig_atomic_t token = 0;
 
 static void alrm_handler(int);
 static void module_destroy(void);
