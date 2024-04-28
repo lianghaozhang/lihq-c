@@ -3,6 +3,7 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <errno.h>
+#include <string.h>
 
 #include "mytbf.h"
 
@@ -134,8 +135,12 @@ static void module_load(void)
 	//signal(SIGALRM, alrm_handler);
 	//alarm(1);
 	int err;
-
-	pthread_create(&tid_load, NULL, thr_alrm, NULL);
+	err = pthread_create(&tid_load, NULL, thr_alrm, NULL);
+	if(err)
+	{
+		fprintf(stdout, "pthread_create(): %s\n", strerror(err));
+		exit(1);
+	}
 
 	atexit(module_unload);
 }
