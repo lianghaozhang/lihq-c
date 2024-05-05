@@ -2,9 +2,11 @@
 #define RELAYER_H__
 
 #include <pthread.h>
+#include <poll.h>
 
 #define BUFSIZE		1024
 #define JOBSIZE		10000
+#define PFDSIZE		2
 
 //有限状态机的状态枚举类型
 enum
@@ -44,6 +46,7 @@ typedef struct
 	int fd2_save;
 	rel_fsm_st* fsm12;
 	rel_fsm_st* fsm21;
+	struct pollfd pfd[PFDSIZE];
 } rel_job_st;
 
 

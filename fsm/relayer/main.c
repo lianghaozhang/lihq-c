@@ -50,7 +50,7 @@ int main(void)
 	job1 = rel_add_job(fd1, fd2);
 	job2 = rel_add_job(fd3, fd4);
 	
-	fprintf(stdout, "job1=%d\tjob2=%d\n", job1, job2);
+	//fprintf(stdout, "job1=%d\tjob2=%d\n", job1, job2);
 	while(1);
 
 	close(fd4);

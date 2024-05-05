@@ -3,7 +3,7 @@ LDFLAGS+=-pthread
 
 all: relayer
 
-relayer: main.o relayer.o
+relayer: main.o relayer_poll.o
 	gcc $^ -o $@ $(CFLAGS) $(LDFLAGS)
 
 clean:
