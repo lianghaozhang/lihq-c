@@ -171,8 +171,5 @@ static void fsm_driver(fsm_st* fsm)
 			break;
 	}
 
-
 }
-
-
 

@@ -1,20 +1,25 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <wait.h>
+
+#define BUFSIZE	1024
 
 int main(void)
 {
-	struct fd_pair pfd;
 	pid_t pid;
-	pfd = pipe();
+	int pfd;
+	int pipefd[2];
+	pfd = pipe(pipefd);
+	char stdin_buf[BUFSIZE];
+	char buf[BUFSIZE];
+	int len;
 	if(pfd < 0)
 	{
 		perror("pipe()");
 		exit(1);
 	}
 	
-	long p_read = pfd.fd[0];
-	long p_write = pfd.fd[1];
 
 	pid = fork();
 	if(pid < 0)
@@ -23,13 +28,23 @@ int main(void)
 		exit(1);
 	}
 
-	if(pid > 0) //parent write
+	if(pid > 0)	//parent read
 	{
-		
+		close(pipefd[1]);
+		fprintf(stdout, "这里是父进程\n");
+		len = read(pipefd[0], buf, BUFSIZE);
+		fprintf(stdout, "父进程收到消息：%s\n", buf);
+		close(pipefd[0]);
+		wait(NULL);
 	}
-	else
+	else	//child write
 	{
-	
+		close(pipefd[0]);
+		fprintf(stdout, "这里是子进程\n");
+		fprintf(stdout, "子进程发送信息：HELLO!\n");
+		write(pipefd[1], "HELLO!\n", 7);
+		close(pipefd[1]);
+		exit(0);
 	}
 
 	exit(0);
